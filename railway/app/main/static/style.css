@@ -1,22 +1,24 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color:white;
 }
 
 /* Body Styles */
 body {
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #393f4d
 }
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #000000;
+    background-color: #1d1e22;
     padding: 15px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -82,7 +84,7 @@ body {
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #000000;
+    background-color: #1d1e22;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -96,7 +98,7 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #000000;
+    background-color: #1d1e22;
     color: #ffffff;
     padding: 20px;
     display: flex;
@@ -221,3 +223,68 @@ body {
 .image-gallery img:hover {
     transform: scale(1.05);
 }
+
+.section1, .section2, .section3 {
+  position: relative; /* Create a stacking context for the pseudo-elements */
+}
+
+.section1 {
+  background-image: url('photos/image1.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.section2 {
+  background-image: url('photos/image4.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.section3 {
+  background-image: url('photos/image3.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+hr {
+  border: 0;
+  margin: 5px 0;
+}
+
+.section1::before, .section2::before, .section3::before {
+  content: '';
+  position: absolute; /* Position it absolutely within the section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(4px); /* Apply the blur effect */
+  z-index: 0; /* Ensure it’s behind the content */
+}
+
+.section1::before {
+  background-image: url('photos/image1.jpeg');
+}
+
+.section2::before {
+  background-image: url('photos/image4.jpeg');
+}
+
+.section3::before {
+  background-image: url('photos/image3.jpeg');
+}
+
+.content1, .content2, .content3 {
+  position: relative;
+  z-index: 1; /* Content stays on top of the background */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+

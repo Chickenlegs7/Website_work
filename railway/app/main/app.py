@@ -18,11 +18,6 @@ app.secret_key = secrets.token_hex(32)
 def home():
     return render_template('home.html', year=datetime.now().year)
 
-# About route
-@app.route('/about')
-def about():
-    return render_template('about.html', year=datetime.now().year)
-
 # Services route
 @app.route('/services')
 def services():

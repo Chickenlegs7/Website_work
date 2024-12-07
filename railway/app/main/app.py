@@ -23,18 +23,9 @@ def home():
 def services():
     return render_template('services.html', year=datetime.now().year)
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact')
 def contact():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
-        
-        # Handle form submission here (e.g., save to database, send email)
-        flash("Thank you for contacting us, we'll get back to you shortly!", "success")
-        return redirect(url_for('contact'))
-    
-    return render_template('contact.html', year=datetime.now().year)
+    return render_template('new_contact.html', year=datetime.now().year)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -66,35 +66,6 @@ body {
     flex: 1; /* Ensure the content takes up available space */
 }
 
-/* Contact Form Styles */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #1d1e22;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #0056b3;
-}
 
 /* Footer Styles */
 .footer {
@@ -102,6 +73,7 @@ body {
     color: #ffffff;
     padding: 20px;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -288,3 +260,88 @@ hr {
   text-align: center;
 }
 
+/* New Contact Form CSS */
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2{
+  font-weight: 600;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+  border: none;
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus {
+  border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder{
+  color: #a9a9a9;
+}
+
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+
+.contact-left button img {
+  height: 15px;
+}
+
+.contact-right img {
+  width: 500px;
+}
+
+@media (max-width: 800px) {
+  .contact-inputs {
+    width: 80vw;
+  }
+  .contact-right {
+    display: none;
+  }
+}

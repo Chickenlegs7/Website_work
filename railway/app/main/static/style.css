@@ -157,6 +157,15 @@ body {
     }
 }
 
+.main-page hr{
+  border: none;
+  width: 2500px;
+  height: 5px;
+  background: #1d1e22;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 /* Make images responsive */
 .responsive-img {
     max-width: 100%;     /* Ensures image never exceeds the container width */
@@ -200,21 +209,6 @@ body {
   position: relative; /* Create a stacking context for the pseudo-elements */
 }
 
-.section1 {
-  background-image: url('photos/image1.jpeg'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center center; /* Centers the image within the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-
-.section2 {
-  background-image: url('photos/image4.jpeg'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center center; /* Centers the image within the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-
-
 .section3 {
   background-image: url('photos/image3.jpeg'); /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the entire area */
@@ -240,16 +234,19 @@ hr {
   z-index: 0; /* Ensure it’s behind the content */
 }
 
-.section1::before {
-  background-image: url('photos/image1.jpeg');
-}
-
-.section2::before {
-  background-image: url('photos/image4.jpeg');
-}
-
 .section3::before {
   background-image: url('photos/image3.jpeg');
+}
+
+.section1 {
+  background-image: url('photos/image1.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.section1::before {
+  background-image: url('photos/image1.jpeg');
 }
 
 .content1, .content2, .content3 {
@@ -262,7 +259,7 @@ hr {
 
 /* New Contact Form CSS */
 .contact-container {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

@@ -205,11 +205,11 @@ body {
     transform: scale(1.05);
 }
 
-.section1, .section2, .section3 {
+.section1, .section2, .section3, .section4 {
   position: relative; /* Create a stacking context for the pseudo-elements */
 }
 
-.section3 {
+.section4 {
   background-image: url('photos/image3.jpeg'); /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the entire area */
   background-position: center center; /* Centers the image within the container */
@@ -221,7 +221,7 @@ hr {
   margin: 5px 0;
 }
 
-.section1::before, .section2::before, .section3::before {
+.section1::before, .section2::before, .section3::before, .section4::before {
   content: '';
   position: absolute; /* Position it absolutely within the section */
   top: 0;
@@ -234,7 +234,7 @@ hr {
   z-index: 0; /* Ensure it’s behind the content */
 }
 
-.section3::before {
+.section4::before {
   background-image: url('photos/image3.jpeg');
 }
 
@@ -249,7 +249,7 @@ hr {
   background-image: url('photos/image1.jpeg');
 }
 
-.content1, .content2, .content3 {
+.content1, .content2, .content3, .content4 {
   position: relative;
   z-index: 1; /* Content stays on top of the background */
   padding: 20px;
@@ -341,4 +341,18 @@ hr {
   .contact-right {
     display: none;
   }
+}
+
+ul {
+  list-style-type: disc; /* Default bullet style */
+  padding-left: 0; /* Remove default padding */
+  margin: 0 auto; /* Center the list horizontally */
+  text-align: center; /* Center the content */
+  width: fit-content; /* Make the list width fit the content */
+}
+
+li {
+  list-style-position: outside; /* Keeps the dot outside */
+  display: flex; /* Makes the <li> a flex container */
+  align-items: center; /* Vertically aligns dot with content */
 }

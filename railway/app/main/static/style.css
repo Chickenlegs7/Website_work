@@ -9,11 +9,12 @@
 
 /* Body Styles */
 body {
+  overflow-x: hidden;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #393f4d
+  background-color: #393939
 }
 
 /* Navigation Bar Styles */
@@ -205,15 +206,8 @@ body {
     transform: scale(1.05);
 }
 
-.section1, .section2, .section3, .section4 {
+.section1, .section2, .section3, .section4, .section5 {
   position: relative; /* Create a stacking context for the pseudo-elements */
-}
-
-.section4 {
-  background-image: url('photos/image3.jpeg'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center center; /* Centers the image within the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 hr {
@@ -221,7 +215,7 @@ hr {
   margin: 5px 0;
 }
 
-.section1::before, .section2::before, .section3::before, .section4::before {
+.section1::before, .section2::before, .section3::before, .section4::before, .section5::before {
   content: '';
   position: absolute; /* Position it absolutely within the section */
   top: 0;
@@ -234,22 +228,63 @@ hr {
   z-index: 0; /* Ensure it’s behind the content */
 }
 
-.section4::before {
-  background-image: url('photos/image3.jpeg');
+ .section1 {
+   /* background-image: url('photos/image1.jpeg'); */ /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-.section1 {
-  background-image: url('photos/image1.jpeg'); /* Replace with your image path */
+.section1::before {
+  /* background-image: url('photos/image1.jpeg'); */
+}
+
+.section2 {
+  /* background-image: url('photos/image7.jpeg'); */ /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the entire area */
   background-position: center center; /* Centers the image within the container */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-.section1::before {
-  background-image: url('photos/image1.jpeg');
+.section2::before {
+  /* background-image: url('photos/image7.jpeg'); */
 }
 
-.content1, .content2, .content3, .content4 {
+
+.section3 {
+  /* background-image: url('photos/image9.jpeg'); */ /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.section3::before {
+  /* background-image: url('photos/image9.jpeg'); */
+}
+
+.section4 {
+  /* background-image: url('photos/image6.jpeg'); */ /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.section4::before {
+  /* background-image: url('photos/image6.jpeg'); */
+}
+
+.section5 {
+  /* background-image: url('photos/image3.jpeg'); */ /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.section5::before {
+  /* background-image: url('photos/image3.jpeg'); */
+}
+
+.content1, .content2, .content3, .content4, .content5 {
   position: relative;
   z-index: 1; /* Content stays on top of the background */
   padding: 20px;
@@ -343,7 +378,7 @@ hr {
   }
 }
 
-ul {
+.main-page ul {
   list-style-type: disc; /* Default bullet style */
   padding-left: 0; /* Remove default padding */
   margin: 0 auto; /* Center the list horizontally */
@@ -351,7 +386,7 @@ ul {
   width: fit-content; /* Make the list width fit the content */
 }
 
-li {
+.main-page li {
   list-style-position: outside; /* Keeps the dot outside */
   display: flex; /* Makes the <li> a flex container */
   align-items: center; /* Vertically aligns dot with content */

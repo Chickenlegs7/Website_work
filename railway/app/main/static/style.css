@@ -185,7 +185,7 @@ body {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 363px));
     gap: 20px;
     padding: 20px;
     justify-content: center;
@@ -205,6 +205,20 @@ body {
 .image-gallery img:hover {
     transform: scale(1.05);
 }
+
+.image-gallery-solo {
+    margin: 0;
+    width: 100%;  /* Ensures the gallery takes full width inside the container */
+    max-width: 600px;  /* Optional: Limit max width for better control */
+}
+
+.image-gallery-solo img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
 
 .section1, .section2, .section3, .section4, .section5 {
   position: relative; /* Create a stacking context for the pseudo-elements */
@@ -304,24 +318,28 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 20px;
+  gap: 10px;
 }
 
 .contact-left-title h2{
   font-weight: 600;
-  background: linear-gradient(270deg, #ff994f, #fa6d86);
-  font-size: 40px;
+  font-size: 38px;
+  background: black;
+  border-radius: 25px;
   margin-bottom: 5px;
+  padding: 8px 8px;
 }
 
 .contact-left-title hr{
   border: none;
   width: 120px;
   height: 5px;
-  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  background: black;
   border-radius: 10px;
   margin-bottom: 20px;
+  padding: 5px 5px;
 }
+
 
 .contact-inputs {
   width: 400px;
@@ -357,7 +375,7 @@ hr {
   gap: 10px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  background: #000000;
   cursor: pointer;
 }
 
@@ -366,7 +384,7 @@ hr {
 }
 
 .contact-right img {
-  width: 500px;
+  width: 250px;
 }
 
 @media (max-width: 800px) {
@@ -390,4 +408,94 @@ hr {
   list-style-position: outside; /* Keeps the dot outside */
   display: flex; /* Makes the <li> a flex container */
   align-items: center; /* Vertically aligns dot with content */
+}
+
+body {
+	background: #262a2b;
+}
+.tilesWrap {
+	padding: 0;
+	margin: 50px auto;
+	list-style: none;
+	text-align: center;
+}
+.tilesWrap li {
+	display: inline-block;
+	width: 20%;
+	min-width: 100px;
+	max-width: 150px;
+	padding: 80px 20px 40px;
+	position: relative;
+	vertical-align: top;
+	margin: 10px;
+	font-family: 'helvetica', san-serif;
+	min-height: 25vh;
+	background: #262a2b;
+	border: 1px solid #252727;
+	text-align: left;
+}
+.tilesWrap li h2 {
+	font-size: 114px;
+	margin: 0;
+	position: absolute;
+	opacity: 0.2;
+	top: 50px;
+	right: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.tilesWrap li h3 {
+	font-size: 20px;
+	color: #b7b7b7;
+	margin-bottom: 5px;
+}
+.tilesWrap li p {
+	font-size: 16px;
+	line-height: 18px;
+	color: #b7b7b7;
+	margin-top: 5px;
+}
+.tilesWrap li:hover h2 {
+	top: 0px;
+	opacity: 0.6;
+}
+
+.tilesWrap li:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	z-index: -1;
+	background: #fff;
+	transform: skew(2deg, 2deg);
+}
+.tilesWrap li:after {
+	content: '';
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(255, 255, 255, 0.02);
+}
+.tilesWrap li:nth-child(1):before {
+	background: #C9FFBF;
+background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
+background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+}
+.tilesWrap li:nth-child(2):before {
+	background: #f2709c;
+background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+background: linear-gradient(to right, #ff9472, #f2709c);
+}
+.tilesWrap li:nth-child(3):before {
+	background: #c21500;
+background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+background: linear-gradient(to right, #ffc500, #c21500);
+}
+.tilesWrap li:nth-child(4):before {
+	background: #FC354C;
+background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+background: linear-gradient(to right, #0ABFBC, #FC354C);
 }

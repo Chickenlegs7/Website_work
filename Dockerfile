@@ -1,16 +1,8 @@
 FROM python:3.9
 
-ENV APP_HOME /Main
-WORKDIR $APP_HOME
+WORKDIR /app
 
-COPY . ./
+COPY . /app
+RUN pip3 install -r requirements.txt
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=8080
-
-EXPOSE 8080
-
-CMD ["flask", "run"]
+CMD ["python3", "app/app.py"]

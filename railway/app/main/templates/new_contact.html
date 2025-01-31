@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Contact Us - Flask Website{% endblock %}
+{% block title %}Contact Us{% endblock %}
 
 {% block content %}
 <body>
@@ -11,11 +11,10 @@
 			<h2>Get in Touch</h2>
 			<hr>
 		</div>
-		<input type="hidden" name="access_key" value="5ae5d054-2ccd-4426-9ce2-13913a9a2821">
-
+		<input type="hidden" name="access_key" value="c8887d4a-405d-46fe-97f1-168eefabc0bd">
 		<input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
 		<input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-		<textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+		<textarea name="message" placeholder="Your Message" class="contact-inputs" style="color:black;" required></textarea>
 		<button type="submit"> Submit <img src="{{ url_for('static', filename='photos/arrow_icon.png') }}" alt=""></button>
 	</form>
 	<div class="contact-right">

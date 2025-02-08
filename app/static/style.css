@@ -14,7 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #393939
+  background-color: #393939;
+  margin: 0;
 }
 
 /* Navigation Bar Styles */
@@ -29,6 +30,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    left: 0;
+    right: 0;
 }
 
 .navbar .logo a {
@@ -133,23 +136,29 @@ body {
         text-align: justify; /* Justify text for better readability */
     }
 
-    .navbar .logo a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
+    .tilesWrap li {
+        width: auto; /* Allow it to shrink */
+        min-width: 80px;
+        max-width: 90%; /* Adjust dynamically */
+	padding: 20px 10px 10px;
+	min-height: clamp(100px, 7vh, 200px);
     }
 
     .tilesWrap li h2 {
-	height: 40px;
-	width: 40px;
-	justify-content: center; 
+        font-size: 8vw; /* Smaller on mobile */
+        top: 20px;
+        right: 5px;
     }
 
     .tilesWrap li h3 {
-	height: 60px;
-	width: 10px;
-	justify-content: center;
+        font-size: 3.5vw;
+    }
+
+    .navbar .logo a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     .nav-links {
@@ -405,18 +414,19 @@ body {
 	width: 20%;
 	min-width: 100px;
 	max-width: 150px;
-	padding: 80px 20px 40px;
+	padding: 40px 20px 20px; /* Reduce padding */
+        border: 1px solid #252727;
+        box-sizing: border-box;
 	position: relative;
 	vertical-align: top;
 	margin: 10px;
 	font-family: 'helvetica', san-serif;
-	min-height: 25vh;
+	min-height: clamp(200px, 16vh, 400px);
 	background: #262a2b;
-	border: 1px solid #252727;
 	text-align: left;
 }
 .tilesWrap li h2 {
-	font-size: 114px;
+	font-size: clamp(40px, 10vw, 114px);
 	margin: 0;
 	position: absolute;
 	opacity: 0.2;
@@ -425,7 +435,7 @@ body {
 	transition: all 0.3s ease-in-out;
 }
 .tilesWrap li h3 {
-	font-size: 20px;
+	font-size: clamp(12px, 3.5vw, 20px);
 	color: #b7b7b7;
 	margin-bottom: 5px;
 }

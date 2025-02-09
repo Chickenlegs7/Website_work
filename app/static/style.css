@@ -81,13 +81,8 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    gap: 40px;
+    left: 0;
+    right: 0
 }
 
 .footer-section {
@@ -122,6 +117,14 @@ body {
     transform: scale(1.1);
 }
 
+.info-tags {
+    font-size: 20px;
+    line-height: 1.4; /* Improve spacing */
+    max-width: 750px; /* Adjust width */
+    text-align: left; /* Avoid large gaps */
+    text-justify: inter-word; /* If you want justification */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
@@ -129,29 +132,45 @@ body {
 	/*flex-direction: column; */
         align-items: flex-start;
     }
+
     .info-tags {
-        font-size: 16px;  /* Smaller font for mobile */
-        line-height: 1.0;
-        max-width:275px;
-        text-align: justify; /* Justify text for better readability */
+        max-width: 33%;
+	font-size: 16px;
+        line-height: 1.4; /* Improve spacing */
+        max-width: 275px; /* Adjust width */
+        text-align: left; /* Avoid large gaps */
+        text-justify: inter-word; /* If you want justification */
+    }
+
+    .tilesWrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 12px; /* Space between tiles */
+        padding: 10px;
     }
 
     .tilesWrap li {
-        width: auto; /* Allow it to shrink */
-        min-width: 80px;
-        max-width: 90%; /* Adjust dynamically */
-	padding: 20px 10px 10px;
-	min-height: clamp(100px, 7vh, 200px);
+        width: 100%;
+        max-width: 160px; /* Keeps them compact */
+        aspect-ratio: 3/4; /* Keeps tile proportions */
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Proper spacing */
+        align-items: center;
     }
 
     .tilesWrap li h2 {
-        font-size: 8vw; /* Smaller on mobile */
-        top: 20px;
-        right: 5px;
+        font-size: clamp(14px, 6vw, 30px);
+        margin-bottom: 10px; /* Space between h2 and h3 */
+	top: 0;
     }
 
     .tilesWrap li h3 {
-        font-size: 3.5vw;
+        font-size: clamp(12px, 3.5vw, 18px);
+        text-align: center;
+	top: 50;
     }
 
     .navbar .logo a {
@@ -413,7 +432,7 @@ body {
 	display: inline-block;
 	width: 20%;
 	min-width: 100px;
-	max-width: 150px;
+	max-width: 160px;
 	padding: 40px 20px 20px; /* Reduce padding */
         border: 1px solid #252727;
         box-sizing: border-box;
@@ -469,4 +488,25 @@ body {
 	left: 0;
 	top: 0;
 	background: rgba(255, 255, 255, 0.02);
+}
+
+.content1 h1 {
+   font-size: 30px;
+ }
+
+.content1 h2 {
+   font-size: 24px;
+}
+
+.content2 h2 {
+   font-size: 24px;
+}
+.content3 h2 {
+   font-size: 24px;
+}
+.content4 h2 {
+   font-size: 24px;
+}
+.content5 h2 {
+   font-size: 24px;
 }

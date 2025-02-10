@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   background-color: #393939;
   margin: 0;
+  padding-top: 30px;
 }
 
 /* Navigation Bar Styles */
@@ -59,15 +60,16 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #ffdd57; /* Yellow highlight on hover */
-    transform: scale(1.1)
+.menu-toggle {
+     display: none;
 }
 
 /* Content Area Styles */
 .content {
     padding: 20px;
     flex: 1; /* Ensure the content takes up available space */
+    flex-grow: 1;
+    padding-top: 30px;
 }
 
 
@@ -81,13 +83,14 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    left: 0;
-    right: 0
+    min-width: unset;
 }
 
 .footer-section {
-    flex: 1;
+    flex: 1 1 200px;
+    width: auto;
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .footer-section h3 {
@@ -100,10 +103,6 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
-}
-
-.footer-section a:hover {
-    color: #ffdd57; /* Yellow highlight on hover */
 }
 
 /* Social Media Links */
@@ -129,7 +128,7 @@ body {
 @media (max-width: 768px) {
     .navbar {
         min-width: 100%;
-	/*flex-direction: column; */
+	padding: 10px 15px;
         align-items: flex-start;
     }
 
@@ -187,14 +186,26 @@ body {
 	transform: scale(1.1);
     }
     
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
+    .nav-links a {
+        padding: 0px 0px;
     }
+  
+    .footer-section {
+        width: 100%;
+	margin-bottom: 10px;
+    }
+
+    .footer {
+	justify-content: flex-start;
+	align-items: center;
+        flex-direction: column;
+    }
+
     /* Resize body content */
     body {
-        font-size: 14px; /* Reduce font size for smaller screens */
+        font-size: unset; /* Reduce font size for smaller screens */
         padding: 10px; /* Add padding for better spacing */
+	padding-top: 30px;
     }
 
     /* Adjust other elements if needed */
@@ -209,6 +220,47 @@ body {
 
     .section {
         margin-bottom: 20px; /* Add margin between sections */
+    }
+
+    .nav-links {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        right: 0;
+        width: 35%;
+	height: 35%;
+        background-color: #1d1e22;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-links li {
+        display: block; /* Stack items vertically */
+
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+	font-size: 13px;
+    }
+
+    /* Hamburger Menu Icon */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+    .content {
+        padding-top: 30px;
     }
 }
 
@@ -512,4 +564,7 @@ body {
 .company-logo {
      width:100px; 
      height:100px;
+}
+.company-name {
+    font-size: 16px;
 }

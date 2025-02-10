@@ -9,8 +9,9 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
-		<a href="{{ url_for('home') }}"><img class="company-logo" src="{{ url_for('static', filename='photos/wildrose-logo.png') }}">Wildrose Industrial Services</a>
+		<a href="{{ url_for('home') }}"><img class="company-logo" src="{{ url_for('static', filename='photos/wildrose-logo.png') }}"></a>
         </div>
+	<button class="menu-toggle">&#9776;</button> <!-- Hamburger Icon -->
         <ul class="nav-links">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
